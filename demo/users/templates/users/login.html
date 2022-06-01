@@ -1,0 +1,26 @@
+<body style="background-image:
+linear-gradient(
+  red, #f06d06
+);">
+    
+
+<h2 style="text-align: center;
+background-color: #000428;
+color: white;">login</h2>
+
+<form action="" method="POST"
+style="position: absolute;
+left: 647px;
+top: 115px;">
+    {% csrf_token %}
+    {% for field in form %}
+        <p>{{ field.label }}: <br> {{ field }}</p>
+    {% endfor %}
+    <p>Don't have an account? <a href="{% url 'register' %} " style="text-decoration: none;
+        color: floralwhite;">Signup</a></p>
+    <button type="submit">Login</button>
+</form>
+
+
+
+</body>
